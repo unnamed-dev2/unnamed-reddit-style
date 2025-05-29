@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Art Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="frontend/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Art Buddy</h1>
+    <p class="subtitle">Your AI Art Critique Companion</p>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><strong>Menu</strong></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Submit Art</a></li>
+          <li><a href="#">Explore Styles</a></li>
+        </ul>
+        <ul>
+          <li><strong>Resources</strong></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Docs</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Feed -->
+    <main class="feed">
+      <form id="critique-form" enctype="multipart/form-data">
+        <label for="art">What would you like me to critique?</label>
+        <textarea id="art" name="art" rows="4" placeholder="e.g. color, lighting, anatomy..." required></textarea>
+
+        <label for="file">Upload artwork:</label>
+        <input type="file" id="file" name="file" accept="image/png, image/jpeg" required>
+        <div id="file-warning"></div>
+
+        <label for="style">Style (e.g. digital art):</label>
+        <input type="text" id="style" name="style" placeholder="e.g. digital art" required>
+
+        <button type="submit">Get Critique</button>
+
+        <img id="preview" src="#" alt="Image Preview">
+        <div id="response"></div>
+      </form>
+
+      <!-- Posts could appear below -->
+      <section id="post-feed"></section>
+    </main>
+
+    <!-- Sidebar Right (Optional Widgets) -->
+    <aside class="rightbar">
+      <h3>Popular Styles</h3>
+      <ul>
+        <li>Surrealism</li>
+        <li>Brutalism</li>
+        <li>Digital Collage</li>
+        <li>Concept Art</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    Built by Art Buddy – Inspired by Reddit<br>
+    Hosted on GitHub Pages & Google Cloud
+  </footer>
+
+  <script src="frontend/script.js"></script>
+</body>
+</html>
