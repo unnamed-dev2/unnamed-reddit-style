@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Art Buddy Feed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="frontend/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit Style Page</title>
+  <link rel="stylesheet" href="frontend/style.css" />
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>Art Buddy</h1>
-    <p class="subtitle">Your Friend-Based AI Art Feed</p>
+    <h1>Reddit Clone</h1>
+    <p class="subtitle">A community for sharing posts</p>
   </header>
 
-  <div class="layout">
+  <!-- Main Layout -->
+  <main>
     <!-- Sidebar -->
     <aside class="sidebar">
-      <nav>
-        <ul>
-          <li><strong>Menu</strong></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">My Friends</a></li>
-          <li><a href="#">Upload</a></li>
-          <li><a href="#">Explore</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Main Feed -->
-    <main class="feed">
-      <div class="post-container">
-        <div class="vote-bar">
-          <button>⬆️</button>
-          <div class="score">42</div>
-          <button>⬇️</button>
-        </div>
-        <div class="post">
-          <div class="post-header">
-            <strong>@calvin</strong> • Digital Art • 3h ago
-          </div>
-          <img src="https://via.placeholder.com/600x300" alt="Art Post">
-          <p class="post-caption">"This is my latest piece! Feedback welcome!"</p>
-          <div class="post-actions">
-            <button>❤️ Like</button>
-            <button>💬 Comment</button>
-            <button>🔗 Share</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Additional posts can go here -->
-    </main>
-
-    <!-- Right Sidebar -->
-    <aside class="rightbar">
-      <h3>Trending Artists</h3>
+      <h2>About</h2>
+      <p>This is a mock Reddit-style layout built for customization and testing.</p>
+      <hr />
+      <h3>Links</h3>
       <ul>
-        <li><a href="#">@artbyjules</a></li>
-        <li><a href="#">@canvas_king</a></li>
-        <li><a href="#">@ai_painter</a></li>
-      </ul>
-
-      <h3>Popular Topics</h3>
-      <ul>
-        <li><a href="#">🌌 AI Landscapes</a></li>
-        <li><a href="#">🔥 Digital Collage</a></li>
-        <li><a href="#">🧠 Prompt Techniques</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">All Posts</a></li>
       </ul>
     </aside>
-  </div>
 
-  <footer>
-    Art Buddy – Powered by GitHub Pages & Google Cloud
-  </footer>
+    <!-- Post Feed -->
+    <section class="feed">
+
+      <!-- Post -->
+      <article class="post">
+        <h2 class="post-title">First Post Title</h2>
+        <p class="post-content">This is an example post. You can customize the content, add images, links, or anything you'd like.</p>
+        <p class="post-meta">Posted by u/example_user  •  1 hour ago</p>
+      </article>
+
+      <!-- Post -->
+      <article class="post">
+        <h2 class="post-title">Another Great Post</h2>
+        <p class="post-content">Here’s another example. Use this space to build a real Reddit-style thread.</p>
+        <p class="post-meta">Posted by u/test_account  •  3 hours ago</p>
+      </article>
+
+      <!-- Form to Submit a Post -->
+      <article class="post">
+        <h2 class="post-title">Create a New Post</h2>
+        <form>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Enter a post title" />
+
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" rows="4" placeholder="Share your thoughts..."></textarea>
+
+          <button type="submit">Post</button>
+        </form>
+      </article>
+
+    </section>
+  </main>
 
 </body>
 </html>

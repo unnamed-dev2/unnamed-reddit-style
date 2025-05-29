@@ -1,136 +1,117 @@
-/* Base */
+/* Base Box Model Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body & Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-  color: #222;
+  background-color: #dae0e6; /* Reddit's soft gray */
+  color: #1a1a1b;
   margin: 0;
+  padding: 0;
 }
 
 /* Header */
 header {
-  background: #1e1e1e;
+  background-color: #1a1a1b;
   color: white;
-  text-align: center;
-  padding: 2.5rem 1rem;
-}
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-.subtitle {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Layout */
-.layout {
-  display: grid;
-  grid-template-columns: 220px 1fr 220px;
-  gap: 1.5rem;
-  padding: 2rem;
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 /* Sidebar */
-.sidebar, .rightbar {
+.sidebar {
+  width: 260px;
   background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  font-size: 0.95rem;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
-.sidebar ul, .rightbar ul {
-  list-style: none;
-  padding: 0;
+
+/* Feed / Posts */
+.feed {
+  max-width: 740px;
+  width: 100%;
 }
-.sidebar li, .rightbar li {
-  margin: 0.5rem 0;
+
+/* Individual Post Style */
+.post {
+  background-color: white;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.sidebar a, .rightbar a {
-  color: #333;
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0079d3;
+  margin: 0 0 0.5rem;
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #1a1a1b;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: #7c7c7c;
+  margin-top: 0.5rem;
+}
+
+/* Links & Buttons */
+a {
   text-decoration: none;
+  color: #0079d3;
 }
-.sidebar a:hover, .rightbar a:hover {
+
+a:hover {
   text-decoration: underline;
 }
 
-/* Feed & Posts */
-.feed {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.post-container {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.vote-bar {
-  width: 40px;
-  text-align: center;
-  color: #999;
-  font-size: 1.2rem;
-}
-.vote-bar button {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #999;
-}
-.vote-bar button:hover {
-  color: #000;
-}
-.score {
-  font-weight: bold;
-  margin: 0.25rem 0;
-}
-
-/* Post */
-.post {
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  flex: 1;
-}
-.post-header {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 0.5rem;
-}
-.post img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 0.5rem 0;
-}
-.post-caption {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-.post-actions {
-  display: flex;
-  gap: 1rem;
-}
-.post-actions button {
-  background-color: #f0f0f0;
+button {
+  background: #0079d3;
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-.post-actions button:hover {
-  background-color: #ddd;
-  transform: scale(1.02);
+  transition: background 0.3s ease;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background-color: #f0f0f0;
-  color: #777;
+button:hover {
+  background: #005999;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Selection */
+::selection {
+  background: #0079d3;
+  color: white;
 }

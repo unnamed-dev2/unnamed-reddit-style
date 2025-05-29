@@ -7,9 +7,10 @@
 ├── frontend/                # All static assets and logic
 │   ├── style.css            # Styling
 │   └── script.js            # Frontend logic and API calls
+|   └── vote_post.js
 │
 ├── backend/                 # Google Cloud Functions (Python-based)
-│   ├── main.py              # Entrypoint for routing (Flask app or similar)
+│   ├── main.py              # Entrypoint for cloud functions
 │   ├── create_post.py       # Create post handler
 │   ├── get_posts.py         # Fetch posts handler
 │   ├── vote_post.py         # Voting handler
