@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Art Buddy</title>
+  <title>Art Buddy Feed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="frontend/style.css">
 </head>
@@ -10,7 +10,7 @@
 
   <header>
     <h1>Art Buddy</h1>
-    <p class="subtitle">Your AI Art Critique Companion</p>
+    <p class="subtitle">Your Friend-Based AI Art Feed</p>
   </header>
 
   <div class="layout">
@@ -20,58 +20,45 @@
         <ul>
           <li><strong>Menu</strong></li>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Submit Art</a></li>
-          <li><a href="#">Explore Styles</a></li>
-        </ul>
-        <ul>
-          <li><strong>Resources</strong></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Docs</a></li>
+          <li><a href="#">My Friends</a></li>
+          <li><a href="#">Upload</a></li>
+          <li><a href="#">Explore</a></li>
         </ul>
       </nav>
     </aside>
 
     <!-- Main Feed -->
     <main class="feed">
-      <form id="critique-form" enctype="multipart/form-data">
-        <label for="art">What would you like me to critique?</label>
-        <textarea id="art" name="art" rows="4" placeholder="e.g. color, lighting, anatomy..." required></textarea>
+      <div class="post">
+        <div class="post-header">
+          <strong>@calvin</strong> • Digital Art
+        </div>
+        <img src="https://via.placeholder.com/600x300" alt="Art Post">
+        <p class="post-caption">"This is my latest piece! Feedback welcome!"</p>
+        <div class="post-actions">
+          <button>❤️ Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
 
-        <label for="file">Upload artwork:</label>
-        <input type="file" id="file" name="file" accept="image/png, image/jpeg" required>
-        <div id="file-warning"></div>
-
-        <label for="style">Style (e.g. digital art):</label>
-        <input type="text" id="style" name="style" placeholder="e.g. digital art" required>
-
-        <button type="submit">Get Critique</button>
-
-        <img id="preview" src="#" alt="Image Preview">
-        <div id="response"></div>
-      </form>
-
-      <!-- Posts could appear below -->
-      <section id="post-feed"></section>
+      <!-- Repeat .post blocks for more content -->
     </main>
 
-    <!-- Sidebar Right (Optional Widgets) -->
+    <!-- Right Sidebar (Suggestions or Trending) -->
     <aside class="rightbar">
-      <h3>Popular Styles</h3>
+      <h3>Friends</h3>
       <ul>
-        <li>Surrealism</li>
-        <li>Brutalism</li>
-        <li>Digital Collage</li>
-        <li>Concept Art</li>
+        <li>@artbyjules</li>
+        <li>@canvas_king</li>
+        <li>@ai_painter</li>
       </ul>
     </aside>
   </div>
 
   <footer>
-    Built by Art Buddy – Inspired by Reddit<br>
-    Hosted on GitHub Pages & Google Cloud
+    Art Buddy – Powered by GitHub Pages & Google Cloud
   </footer>
 
-  <script src="frontend/script.js"></script>
 </body>
 </html>

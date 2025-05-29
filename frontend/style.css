@@ -1,36 +1,104 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  margin: 0;
+}
+
+header {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* Layout */
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr 220px;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 2rem;
 }
 
+/* Sidebar & Rightbar */
 .sidebar, .rightbar {
-  background: white;
-  padding: 1.5rem;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
 }
-
 .sidebar ul, .rightbar ul {
   list-style: none;
   padding: 0;
 }
-
 .sidebar li, .rightbar li {
   margin: 0.5rem 0;
 }
-
 .sidebar a {
-  color: #1e1e1e;
+  color: #333;
   text-decoration: none;
 }
-
 .sidebar a:hover {
   text-decoration: underline;
 }
 
+/* Feed Posts */
 .feed {
-  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+.post img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+.post-header {
+  font-size: 0.95rem;
+  color: #666;
+}
+.post-caption {
+  margin: 1rem 0 0.5rem;
+}
+.post-actions {
+  display: flex;
+  gap: 1rem;
+}
+.post-actions button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.post-actions button:hover {
+  background-color: #ddd;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background-color: #f0f0f0;
+  color: #777;
 }
