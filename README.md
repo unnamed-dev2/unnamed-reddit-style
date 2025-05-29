@@ -2,23 +2,18 @@
 
 /reddit-clone/
 │
-├── frontend/                    # Hosted on GitHub Pages
-│   ├── index.html               # Main HTML
-│   ├── style.css                # Custom CSS (Tailwind or vanilla)
-│   ├── script.js                # Main JS that fetches from Cloud Functions
-│   └── assets/                  # Icons, images, logos
+├── index.html               # GitHub Pages entry point (must be in root)
 │
-├── functions/                   # Google Cloud Functions backend
-│   ├── index.js                 # Entry point that exports your HTTP functions
-│   ├── createPost.js            # Cloud Function for creating posts
-│   ├── getPosts.js              # Cloud Function for fetching posts
-│   ├── votePost.js              # Cloud Function for upvote/downvote
-│   ├── firebase.json            # Firebase config (if using Firebase)
-│   ├── .env                     # Your secret keys (not committed)
-│   └── package.json             # Dependencies for backend functions
+├── frontend/                # All static assets and logic
+│   ├── style.css            # Styling
+│   └── script.js            # Frontend logic and API calls
 │
-├── .github/
-│   └── workflows/               # Optional CI/CD configs
+├── backend/                 # Google Cloud Functions (Python-based)
+│   ├── main.py              # Entrypoint for routing (Flask app or similar)
+│   ├── create_post.py       # Create post handler
+│   ├── get_posts.py         # Fetch posts handler
+│   ├── vote_post.py         # Voting handler
+│   ├── requirements.txt     # Python dependencies for GCF
+│   └── README.md            # Optional backend info
 │
-├── README.md                   # Project overview and setup
-└── .gitignore                  # Ignore node_modules, .env, etc.
+└── .gitignore               # Typical ignores (e.g., __pycache__, etc.)
