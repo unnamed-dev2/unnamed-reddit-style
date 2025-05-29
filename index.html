@@ -29,29 +29,43 @@
 
     <!-- Main Feed -->
     <main class="feed">
-      <div class="post">
-        <div class="post-header">
-          <strong>@calvin</strong> • Digital Art
+      <div class="post-container">
+        <div class="vote-bar">
+          <button>⬆️</button>
+          <div class="score">42</div>
+          <button>⬇️</button>
         </div>
-        <img src="https://via.placeholder.com/600x300" alt="Art Post">
-        <p class="post-caption">"This is my latest piece! Feedback welcome!"</p>
-        <div class="post-actions">
-          <button>❤️ Like</button>
-          <button>💬 Comment</button>
-          <button>🔗 Share</button>
+        <div class="post">
+          <div class="post-header">
+            <strong>@calvin</strong> • Digital Art • 3h ago
+          </div>
+          <img src="https://via.placeholder.com/600x300" alt="Art Post">
+          <p class="post-caption">"This is my latest piece! Feedback welcome!"</p>
+          <div class="post-actions">
+            <button>❤️ Like</button>
+            <button>💬 Comment</button>
+            <button>🔗 Share</button>
+          </div>
         </div>
       </div>
 
-      <!-- Repeat .post blocks for more content -->
+      <!-- Additional posts can go here -->
     </main>
 
-    <!-- Right Sidebar (Suggestions or Trending) -->
+    <!-- Right Sidebar -->
     <aside class="rightbar">
-      <h3>Friends</h3>
+      <h3>Trending Artists</h3>
       <ul>
-        <li>@artbyjules</li>
-        <li>@canvas_king</li>
-        <li>@ai_painter</li>
+        <li><a href="#">@artbyjules</a></li>
+        <li><a href="#">@canvas_king</a></li>
+        <li><a href="#">@ai_painter</a></li>
+      </ul>
+
+      <h3>Popular Topics</h3>
+      <ul>
+        <li><a href="#">🌌 AI Landscapes</a></li>
+        <li><a href="#">🔥 Digital Collage</a></li>
+        <li><a href="#">🧠 Prompt Techniques</a></li>
       </ul>
     </aside>
   </div>
